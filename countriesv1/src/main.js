@@ -7,6 +7,7 @@ import BaseCard from './components/ui/BaseCard.vue';
 import BaseButton from './components/ui/BaseButton.vue';
 import BaseBackButton from './components/ui/BaseBackButton.vue';
 import SearchFilter from './components/ui/BaseSearchBar.vue';
+
 const app = createApp(App)
 
 app.use(router);

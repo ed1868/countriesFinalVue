@@ -1,4 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router';
+// import { createRouter, createWebHistory } from 'vue-router';
+
+import { createRouter, createWebHistory} from 'vue-router'
 
 import CountryDetail from './pages/CountryDetail.vue';
 import CountryList from './pages/CountryList.vue';
