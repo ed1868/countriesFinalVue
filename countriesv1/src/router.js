@@ -9,10 +9,10 @@ import NotFound from './pages/NotFound.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', redirect: '/all' },
-    { path: '/all', component: CountryList },
+    { path: '/', redirect: '/countries' },
+    { path: '/countries', component: CountryList },
     {
-      path: '/country/:countryCode/',
+      path: '/countries/:countryCode',
       component: CountryDetail,
       props: true,
     },

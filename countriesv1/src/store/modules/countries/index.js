@@ -9,6 +9,7 @@ export default {
       lastFetch: null,
       selectedCountry: [],
       countries: [{}],
+      regions:[],
     };
   },
   mutations,

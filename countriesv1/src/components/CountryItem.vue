@@ -10,7 +10,7 @@
       <p class="textPlacement">Population: {{ population }}</p>
       <p class="textPlacement">Region: {{ region }}</p>
       <p class="textPlacement">Capital: {{ capital }}</p>
-      <base-button class="buttonPlacement" link :to="coachDetailsLink"
+      <base-button class="buttonPlacement" link :to="countryDetailLink"
         >View Details</base-button
       >
     </div>
@@ -35,34 +35,17 @@ export default {
   ],
   computed: {
     countryDetailLink() {
-      // console.log(this)
-      // console.log(this.name);
-      // native name
-      // population
-      // region
-      // sub region
-      // capital
-      // top level domain
-      // currencies
-      // languages
-      // border countries
 
-      // let query = this.name.split(' ');
-      // console.log(this.countryCode)
 
-      // return (
-      //   this.$route.path +
-      //   '/' +
-      //   this.countryCode +
-      //   '/' +
-      //   query[0] +
-      //   '/' +
-      //   this.region
-      // ); // /coaches/c1
-      // return "hello"
-      return "hello"
+      return (
+        this.$route.path +
+        '/' +
+        this.countryCode 
+      ); 
     }
-  }
+  },
+
+  
 };
 </script>
 
@@ -357,33 +340,4 @@ body {
     grid-column: span 1;
   }
 }
-
-/* section {
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  margin: 2rem auto;
-  /* max-width: 40rem; 
-  padding: 1rem;
-  border-radius: 12px;
-  
-} */
-
-/* ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-} */
-
-/* li {
-  border-radius: 12px;
-  border: 1px solid red;
-  padding: 1rem;
-  width: 15rem;
-  margin: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
 </style>

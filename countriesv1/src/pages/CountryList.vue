@@ -6,7 +6,6 @@
           <search-filter />
         </div>
       </div>
-
       <div class="row">
         <div class="col-xs-12 text-center">
           <h1>Countries</h1>
@@ -69,21 +68,39 @@ export default {
   computed: {
     filteredCountries() {
       const countries = this.$store.getters["countries/countries"];
-      console.log('LOS COUNTRIES,',countries[1])
+      console.log("LOS COUNTRIES,", countries[1]);
       return countries[1];
     },
-    hasCountries() {
-      return !this.isLoading && this.$store.getters["coaches/hasCountries"];
+
+    filteredRegions() {
+      const regions = this.$store.getters["countries/regions"];
+      console.log("LOS REGIONS,", regions[1]);
+      return regions[1];
     },
   },
   created() {
     this.setCountries();
+    this.setRegions();
   },
   methods: {
     async setCountries(refresh = false) {
       this.isLoading = true;
       try {
         await this.$store.dispatch("countries/setCountries", {
+          forceRefresh: refresh,
+        });
+      } catch (error) {
+        this.error = error.message || "Something went wrong!";
+      }
+      this.isLoading = false;
+    },
+    handleErr() {
+      this.error = null;
+    },
+    async setRegions(refresh = false) {
+      this.isLoading = true;
+      try {
+        await this.$store.dispatch("countries/setRegions", {
           forceRefresh: refresh,
         });
       } catch (error) {
