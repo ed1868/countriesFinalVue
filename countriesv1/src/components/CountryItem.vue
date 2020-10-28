@@ -10,7 +10,7 @@
       <p class="textPlacement">Population: {{ population }}</p>
       <p class="textPlacement">Region: {{ region }}</p>
       <p class="textPlacement">Capital: {{ capital }}</p>
-      <base-button class="buttonPlacement" link :to="countryDetailLink"
+      <base-button class="buttonPlacement"  link :to="countryDetailLink"
         >View Details</base-button
       >
     </div>
@@ -36,7 +36,7 @@ export default {
   computed: {
     countryDetailLink() {
 
-
+console.log('FUCK MAN ')
       return (
         this.$route.path +
         '/' +

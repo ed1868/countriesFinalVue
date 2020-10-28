@@ -90,7 +90,10 @@ export default {
   computed: {
     printer() {
       const newCountry = this.$store.getters["countries/selectedCountry"];
+      console.log('SHIT',newCountry);
       return newCountry[0];
+
+      
     },
   },
 

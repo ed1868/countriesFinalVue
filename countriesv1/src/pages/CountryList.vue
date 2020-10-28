@@ -80,7 +80,7 @@ export default {
   },
   created() {
     this.setCountries();
-    this.setRegions();
+    // this.setRegions();
   },
   methods: {
     async setCountries(refresh = false) {

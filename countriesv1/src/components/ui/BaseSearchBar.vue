@@ -17,14 +17,11 @@
         Filter by Region <i class="fa fa-caret-down dropIcon"></i>
       </button>
       <div class="dropdown-content">
-        <li v-for="region in filteredRegions" :key="region.id" >
-hello
-          </li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 1</a></li>
-        
+        <li v-for="region in filteredRegions" :key="region.id"></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 1</a></li>
       </div>
     </div>
   </div>
